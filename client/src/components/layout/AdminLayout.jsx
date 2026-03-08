@@ -27,9 +27,9 @@ export default function AdminLayout() {
           </div>
           <div>
             <span className="font-bold text-xl text-white" style={{ fontFamily: 'DM Sans' }}>TransFast</span>
-            <p className="text-xs text-primary-300 flex items-center gap-1"><Shield size={10} /> Admin Panel</p>
+            <p className="text-xs text-primary-100 flex items-center gap-1"><Shield size={10} /> Admin Panel</p>
           </div>
-          <button className="ml-auto lg:hidden" onClick={() => setSidebarOpen(false)}><X className="w-5 h-5 text-primary-300" /></button>
+          <button className="ml-auto lg:hidden" onClick={() => setSidebarOpen(false)}><X className="w-5 h-5 text-primary-100" /></button>
         </div>
 
         <div className="px-4 py-4 border-b border-primary-800">
@@ -39,7 +39,7 @@ export default function AdminLayout() {
             </div>
             <div>
               <p className="text-sm font-semibold text-white truncate">{user?.firstName} {user?.lastName}</p>
-              <p className="text-xs text-primary-300 capitalize">{user?.role}</p>
+              <p className="text-xs text-primary-100 capitalize">{user?.role}</p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function AdminLayout() {
         <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
           {adminNavItems.map(({ to, icon: Icon, label, end }) => (
             <NavLink key={to} to={to} end={end} className={({ isActive }) =>
-              `flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${isActive ? 'bg-accent-500 text-white' : 'text-primary-300 hover:bg-primary-800 hover:text-white'}`
+              `flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${isActive ? 'bg-accent-500 text-white' : 'text-primary-100 hover:bg-primary-800 hover:text-white'}`
             }>
               <Icon size={18} />
               <span>{label}</span>
@@ -56,7 +56,7 @@ export default function AdminLayout() {
         </nav>
 
         <div className="px-3 py-4 border-t border-primary-800">
-          <button onClick={() => { logout(); navigate('/login'); }} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-primary-300 hover:bg-primary-800 hover:text-white transition-all w-full">
+          <button onClick={() => { logout(); navigate('/login'); }} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-primary-100 hover:bg-primary-800 hover:text-white transition-all w-full">
             <LogOut size={18} />
             <span>Sign Out</span>
           </button>
